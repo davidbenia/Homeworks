@@ -87,6 +87,41 @@ public class NumberManipulations implements NumberManipulations_Interface{
 
     @Override
     public void Matrix_Manipulation() throws IOException{
+        File file = new File("src/businessOperations/info.txt");
+        FileWriter fr = new FileWriter("src/businessOperations/info.txt");
+        FileReader rd = new FileReader("src/businessOperations/info.txt");
+        int m, n, one_count = 0, zero_count = 0;
 
+        System.out.println("\nInput m:");
+        m = Math.abs(input.nextInt());
+        System.out.println("\nInput n:");
+        n = Math.abs(input.nextInt());
+        if(m > 50)
+            m = 50;
+        if(n > 50)
+            n = 50;
+
+        for(int i = 0; i < m; i++){
+            for(int j = 0; j < n; j++){
+                fr.write(String.format("%d ", rand.nextInt(2)));
+            }
+            fr.write("\n");
+        }
+        fr.close();
+
+        int my_char;
+        for(int i = 0; i < m; i++){
+            for(int j = 0; j < n; j++){
+                my_char = (char)rd.read();
+
+                if(my_char == 49)
+                    one_count++;
+                else if(my_char == 48)
+                    zero_count++;
+            }
+        }
+        rd.close();
+
+        System.out.format("\nOnes: %d; Zeros: %d", one_count, zero_count);
     }
 }
