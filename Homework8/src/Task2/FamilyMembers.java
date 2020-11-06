@@ -33,8 +33,10 @@ public class FamilyMembers extends Thread {
         Random random = new Random();
 
         for(int i = 1; i < random.nextInt(15)+10; i++) {
-            budget.changeMoney(amount);
-            System.out.println(first_name + " " + this.getName() + " " + budget.getMoney());
+            if(budget.changeMoney(amount).equals("failed to get money"))
+                System.out.println(first_name + " " + this.getName() + " failed to get money: wanted " + amount + " > " + budget.getMoney());
+            else
+                System.out.println(first_name + " " + this.getName() + " " + budget.getMoney());
         }
 
         addMemberToFile();

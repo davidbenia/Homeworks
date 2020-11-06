@@ -1,5 +1,6 @@
 package Task2;
 
+import javax.annotation.processing.SupportedSourceVersion;
 import java.io.*;
 
 public class FamilyBudget {
@@ -17,11 +18,14 @@ public class FamilyBudget {
         moneyState();
     }
 
-    synchronized public void changeMoney(int difference){
+    synchronized public String changeMoney(int difference){
         if(difference <= getMoney()) {
             this.money -= difference;
             moneyState();
+            return "";
         }
+        else
+            return "failed to get money";
     }
 
     public void familyStatus(){

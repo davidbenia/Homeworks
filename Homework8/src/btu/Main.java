@@ -30,9 +30,9 @@ public class Main {
         member2.setBudget(familyBudget);
         member3.setBudget(familyBudget);
 
-        member1.setAmount(300);
-        member2.setAmount(200);
-        member3.setAmount(500);
+        member1.setAmount(random.nextInt(5001));
+        member2.setAmount(random.nextInt(5001));
+        member3.setAmount(random.nextInt(5001));
         member1.start();
         member2.start();
         member3.start();
