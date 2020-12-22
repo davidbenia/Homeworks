@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="701.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jfx.DB_Controller">
+   <children>
+      <TableView fx:id="table" layoutX="37.0" layoutY="14.0" prefHeight="243.0" prefWidth="527.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="col_deal" prefWidth="75.0" text="Deal" />
+            <TableColumn fx:id="col_city" prefWidth="75.0" text="City" />
+            <TableColumn fx:id="col_district" prefWidth="75.0" text="District" />
+            <TableColumn fx:id="col_residence" prefWidth="75.0" text="Residence" />
+            <TableColumn fx:id="col_rooms" prefWidth="75.0" text="Rooms" />
+            <TableColumn fx:id="col_price" prefWidth="75.0" text="Price" />
+        </columns>
+      </TableView>
+      <TextArea fx:id="txtAr_description" editable="false" layoutX="37.0" layoutY="265.0" prefHeight="182.0" prefWidth="527.0" promptText="Description" />
+      <Button fx:id="btn_main" layoutX="496.0" layoutY="662.0" mnemonicParsing="false" onAction="#MainWindow" text="Main Window" />
+      <Button fx:id="btn_select" layoutX="43.0" layoutY="587.0" mnemonicParsing="false" onAction="#Select" text="Select" />
+      <Button fx:id="btn_update" layoutX="44.0" layoutY="618.0" mnemonicParsing="false" onAction="#Update" text="Update" />
+      <Button fx:id="btn_delete" layoutX="44.0" layoutY="650.0" mnemonicParsing="false" onAction="#Delete" text="Delete By ID" />
+      <TextField fx:id="txt_deal" layoutX="67.0" layoutY="469.0" promptText="Deal" />
+      <TextField fx:id="txt_city" layoutX="227.0" layoutY="469.0" promptText="City" />
+      <TextField fx:id="txt_price" layoutX="385.0" layoutY="501.0" promptText="Price" />
+      <TextField fx:id="txt_rooms" layoutX="227.0" layoutY="501.0" promptText="Rooms" />
+      <TextField fx:id="txt_residence" layoutX="67.0" layoutY="501.0" promptText="Residence" />
+      <TextField fx:id="txt_district" layoutX="385.0" layoutY="469.0" promptText="District" />
+      <TextField fx:id="txt_id" layoutX="227.0" layoutY="534.0" promptText="id" />
+   </children>
+</AnchorPane>

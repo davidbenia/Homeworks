@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jfx.Controller">
+   <children>
+      <Separator layoutY="50.0" prefHeight="0.0" prefWidth="600.0" />
+      <Label layoutX="14.0" layoutY="14.0" text="განცხადების ფორმა:" textFill="#54942d" textOverrun="LEADING_WORD_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="68.0" text="გარიგების ტიპი:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="166.0" text="უბანი:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="117.0" text="მდებარეობა:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="217.0" text="ქონების ტიპი:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="255.0" prefHeight="64.0" prefWidth="87.0" text="ოთახების რაოდენობა:" wrapText="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="342.0" text="ფასი:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="432.0" text="ელ. ფოსტა:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="173.0" layoutY="432.0" text="ტელეფონი:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="391.0" text="საკონტაქტო ინფორმაცია:" textFill="#2200ff">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="478.0" text="ტექსტი:" textFill="#2200ff">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Separator layoutY="381.0" prefHeight="0.0" prefWidth="600.0" />
+      <Separator layoutY="466.0" prefHeight="0.0" prefWidth="600.0" />
+      <Separator layoutY="660.0" prefHeight="0.0" prefWidth="600.0" />
+      <Separator layoutY="100.0" prefHeight="3.0" prefWidth="400.0" />
+      <Separator layoutY="151.0" prefHeight="3.0" prefWidth="400.0" />
+      <Separator layoutY="200.0" prefHeight="3.0" prefWidth="400.0" />
+      <Separator layoutY="254.0" prefHeight="3.0" prefWidth="400.0" />
+      <Separator layoutY="326.0" prefHeight="3.0" prefWidth="400.0" />
+      <ChoiceBox fx:id="selector_sellrent" layoutX="138.0" layoutY="64.0" prefWidth="150.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="იყიდება" />
+               <String fx:value="ქირავდება" />
+            </FXCollections>
+         </items>
+      </ChoiceBox>
+      <ChoiceBox fx:id="selector_location" layoutX="117.0" layoutY="113.0" prefWidth="150.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="თბილისი" />
+               <String fx:value="ქუთაისი" />
+            </FXCollections>
+         </items>
+      </ChoiceBox>
+      <ChoiceBox fx:id="selector_specific_location" layoutX="70.0" layoutY="162.0" prefWidth="150.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="გლდანი-ნაძალადევი" />
+               <String fx:value="საფიჩხია" />
+            </FXCollections>
+         </items>
+      </ChoiceBox>
+      <ChoiceBox fx:id="selector_product" layoutX="125.0" layoutY="213.0" prefWidth="150.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="ბინა" />
+               <String fx:value="სახლი" />
+            </FXCollections>
+         </items>
+      </ChoiceBox>
+      <ChoiceBox fx:id="selector_currency" layoutX="225.0" layoutY="338.0" prefWidth="150.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="დოლარი" />
+               <String fx:value="ლარი" />
+            </FXCollections>
+         </items>
+      </ChoiceBox>
+      <TextField fx:id="txt_price" layoutX="60.0" layoutY="338.0" />
+      <RadioButton fx:id="radio_1" layoutX="124.0" layoutY="279.0" mnemonicParsing="false" onAction="#Radio" text="1" />
+      <RadioButton fx:id="radio_15" layoutX="174.0" layoutY="279.0" mnemonicParsing="false" onAction="#Radio" text="1.5" />
+      <RadioButton fx:id="radio_2" layoutX="233.0" layoutY="279.0" mnemonicParsing="false" onAction="#Radio" text="2" />
+      <RadioButton fx:id="radio_25" layoutX="288.0" layoutY="279.0" mnemonicParsing="false" onAction="#Radio" text="2.5" />
+      <RadioButton fx:id="radio_3" layoutX="344.0" layoutY="279.0" mnemonicParsing="false" onAction="#Radio" text="3" />
+      <RadioButton fx:id="radio_4" layoutX="386.0" layoutY="279.0" mnemonicParsing="false" onAction="#Radio" text="4" />
+      <RadioButton fx:id="radio_5" layoutX="431.0" layoutY="279.0" mnemonicParsing="false" onAction="#Radio" text="5" />
+      <RadioButton fx:id="radio_more" layoutX="479.0" layoutY="279.0" mnemonicParsing="false" onAction="#Radio" text="5+" />
+      <Separator layoutX="125.0" layoutY="296.0" prefHeight="3.0" prefWidth="400.0" />
+      <Button fx:id="btn_email" layoutX="102.0" layoutY="433.0" maxHeight="15.0" maxWidth="15.0" minHeight="15.0" minWidth="15.0" mnemonicParsing="false" onAction="#AddMail" prefHeight="15.0" prefWidth="15.0" />
+      <Button fx:id="btn_tel" layoutX="260.0" layoutY="433.0" maxHeight="15.0" maxWidth="15.0" minHeight="15.0" minWidth="15.0" mnemonicParsing="false" onAction="#AddTel" prefHeight="15.0" prefWidth="15.0" />
+      <TextArea fx:id="txtAr_description" layoutX="10.0" layoutY="511.0" prefHeight="141.0" prefWidth="581.0" />
+      <Button fx:id="btn_submit" layoutX="3.0" layoutY="663.0" mnemonicParsing="false" onAction="#Submit" text="გაგზავნა" />
+      <Label fx:id="label_radio" layoutX="569.0" layoutY="257.0" text="-" />
+      <Button fx:id="btn_db" layoutX="84.0" layoutY="663.0" mnemonicParsing="false" onAction="#NextWindow" text="მონაცემები" />
+   </children>
+</AnchorPane>
